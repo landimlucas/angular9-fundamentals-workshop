@@ -1,4 +1,5 @@
 <mat-card>
+<<<<<<< Updated upstream
     <mat-card-header>
       <mat-card-title>
         Course Outline
@@ -10,3 +11,31 @@
       
     </mat-card-content>
   </mat-card>
+=======
+  <mat-card-header>
+    <mat-card-title> {{ title }} </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item
+        *ngFor="let lesson of courseLessons"
+        (click)="selectLesson(lesson)"
+      >
+        <h3>{{ lesson.title }}</h3>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Debug</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <span *ngIf="currentLesson; else elseBlock">{{
+      currentLesson | json
+    }}</span>
+    <ng-template #elseBlock>Select a lesson</ng-template>
+  </mat-card-content>
+</mat-card>
+>>>>>>> Stashed changes

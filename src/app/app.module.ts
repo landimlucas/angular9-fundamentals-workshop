@@ -8,15 +8,21 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
 import { HomeComponent } from './home/home.component';
 import { CoursesComponent } from './courses/courses.component';
+<<<<<<< Updated upstream
+=======
+import { FormsModule } from '@angular/forms';
+>>>>>>> Stashed changes
 
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MaterialModule,
     HttpClientModule
   ],
+<<<<<<< Updated upstream
   declarations: [
     AppComponent,
     HomeComponent,
@@ -24,5 +30,10 @@ import { CoursesComponent } from './courses/courses.component';
   ],
   providers: [],
   bootstrap: [AppComponent]
+=======
+  declarations: [AppComponent, HomeComponent, CoursesComponent],
+  providers: [],
+  bootstrap: [AppComponent],
+>>>>>>> Stashed changes
 })
 export class AppModule { }
