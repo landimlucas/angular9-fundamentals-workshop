@@ -32,13 +32,35 @@ export class CoursesComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.resetCurrentCourse();
+  }
+
+  resetCurrentCourse() {
+    const emptyCourse = {
+      id: null,
+      title: '',
+      description: '',
+      percentComplete: 0,
+      favorite: false,
+    };
+
+    this.currentCourse = emptyCourse;
+  }
 
   selectCourse(course) {
     this.currentCourse = course;
   }
 
+  saveCourse() {
+    console.log('Save Course!');
+  }
+
   deleteCourse(courseId) {
     console.log('ID: ', courseId);
+  }
+
+  cancel() {
+    this.resetCurrentCourse();
   }
 }
